@@ -1,0 +1,52 @@
+@"
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environment
+venv/
+.venv/
+env/
+ENV/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Data files (too big for Git)
+data/raw/*.zip
+data/raw/complaints.csv
+data/raw/*.csv
+!data/raw/.gitkeep
+
+# Large vector stores & embeddings (these are huge)
+vector_store/chroma_db/*
+!vector_store/.gitkeep
+vector_store/*.npy
+vector_store/*.bin
+vector_store/*.pkl
+
+# Logs
+*.log
+logs/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Environment variables
+.env
+
+# IDE files
+.vscode/
+.idea/
+
+# Build & cache
+build/
+dist/
+*.egg-info/
+
+# Temporary files
+*.tmp
+"@ | Out-File -Encoding utf8 .gitignore
