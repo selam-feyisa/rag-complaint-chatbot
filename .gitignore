@@ -1,52 +1,25 @@
 @"
-# Byte-compiled / optimized / DLL files
-__pycache__/
-*.py[cod]
-*$py.class
+# Large data files
+data/raw/*.csv
+data/processed/*.csv
+notebooks/data/processed/*.csv
+filtered_complaints.csv
 
-# Virtual Environment
+# Vector store & embeddings (too big)
+vector_store/chroma_db/*
+vector_store/*.npy
+notebooks/vector_store/*
+*.bin
+chroma.sqlite3
+
+# Virtual env
 venv/
 .venv/
-env/
-ENV/
 
-# Jupyter Notebook
+# Jupyter
 .ipynb_checkpoints/
-*.ipynb_checkpoints
+__pycache__/
 
-# Data files (too big for Git)
-data/raw/*.zip
-data/raw/complaints.csv
-data/raw/*.csv
-!data/raw/.gitkeep
-
-# Large vector stores & embeddings (these are huge)
-vector_store/chroma_db/*
-!vector_store/.gitkeep
-vector_store/*.npy
-vector_store/*.bin
-vector_store/*.pkl
-
-# Logs
-*.log
-logs/
-
-# OS files
+# OS
 .DS_Store
-Thumbs.db
-
-# Environment variables
-.env
-
-# IDE files
-.vscode/
-.idea/
-
-# Build & cache
-build/
-dist/
-*.egg-info/
-
-# Temporary files
-*.tmp
-"@ | Out-File -Encoding utf8 .gitignore
+"@ | Out-File -Encoding utf8 .gitignore -Force
